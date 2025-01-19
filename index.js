@@ -1,5 +1,7 @@
 const label =  document.querySelectorAll(".label");
-const input = document.getElementsByTagName("input")
+const input = document.getElementsByTagName("input");
+const icon = document.querySelector(".icon");
+const menu = document.querySelector(".menu");
 // function onFocus() {
 
     Array.from(input).forEach((inp, index) =>
@@ -28,6 +30,13 @@ const input = document.getElementsByTagName("input")
     )
 // }
 
-function offFocus() {
-    document.querySelector(".city-name").classList.remove("active");
-}
+icon.addEventListener("click", ()=> 
+{
+    if (!menu.classList.contains("active"))
+        {
+            menu.classList.add("active");
+        }
+        else {
+            menu.classList.remove("active");
+        }
+})
